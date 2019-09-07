@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+	font-family:monospace;
+}
+.container{
+	background:url("bg1.jpg") no-repeat bottom;
+	height:80%;
+}
+.header{
+	text-align:center;
+}
+.fa{
+	color:#b9b3b3;
+	position:relative;
+	top:10px;
+	font-size:20px;
+	cursor:pointer;
+	padding:10px;
+}
+.fa-search{
+	float:left;
+	left:150px;
+}
+.fa-bars{
+	float:right;
+	right:150px;
+}
+.header .fa:hover{
+	background:white;
+	border-radius:100%;
+	color:#06c4dc;
+}
+.logo{
+	position:relative;
+	top:15px;
+	text-align:center;
+	color:white;
+	text-decoration:none;
+	font-size:25px;
+}
+.logo i{
+	font-family:cursive;
+	position:relative;
+	top:-17px;
+	right:-27px;
+	color:#06c4dc;
+	font-size:20px;
+	font-weight:bold;
+}
+.header::after{
+	display:block;
+	content:"";
+	clear:both;
+}
+.aside{
+	float:right;
+}
+.aside i{
+	top:70px;
+	border-bottom:2px solid #06c4dc;
+	display:block;
+	background:white;
+	background: linear-gradient(to right, #06c4dc 50%, white 50%);
+	background-size: 200% 100%;
+	background-position:right bottom;
+	transition:all .5s ease-out;
+}
+.aside i:last-child{
+	border:none;
+}
+.aside i:hover{
+	color:white;
+	background-position:left top;
+}
+.content{
+	text-align:center;
+	margin-top:5%;
+	color:white;
+}
+.content h3{
+	font-size:25px;
+	font-weight:normal;
+}
+.content h3 i{
+	color:#06c4dc;
+	font-weight:bold;
+}
+.content>p{
+	margin-top:10px;
+	font-size:16px;
+	font-style:italic;
+}
+.form{
+	width:35%;
+	margin:auto;
+	margin-top:30px;
+}
+.form input{
+	border:none;
+	padding:15px;
+	border-radius:30px;
+	margin:10px 0;
+}
+.form input[type="text"]{
+	width:48%;
+}
+.form input:first-child{
+	margin-right:4%;
+}
+.form input[type="email"]{
+	width:100%;
+}
+.form input:last-child{
+	width:100%;
+	background-color:#06c4dc;
+	color:white;
+	font-weight:bold;
+	cursor:pointer;
+	text-transform:uppercase;
+}
+.form input:focus{
+	border:2px solid #06c4dc;
+	outline:none;
+}
+.features{
+	width:75%;
+	margin:50px auto;
+	display:grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-auto-rows: minmax(250px,auto)
+}
+.feature{
+	color:#6b6565;
+	background:white;
+	border:1px solid #06c4dc;
+	padding:20px 40px;
+	font-size:16px;
+}
+.fa-mobile{
+	font-size:25px;
+}
+.feature i:hover{
+	color:#06c4dc;
+	font-size:2em;
+	transition:0.3s;
+}
+.feature h4{
+	font-size:1em;
+	font-weight:1000;
+	padding:10px;
+	color:black;
+}
+.feature > p{
+	margin-top:10px;
+	text-align:justify;
+	font-size:15px;
+}	
+.feature>button{
+	margin-top:2em;
+	background:white;
+	border:3px solid #06c4dc;
+	padding:15px;
+	border-radius:25px;
+	background: linear-gradient(to right, #06c4dc 50%, white 50%);
+	background-size: 200% 100%;
+	background-position:right bottom;
+	transition:all .5s ease-out;
+}
+.feature>button:hover{
+	outline:none;
+	background-position:left bottom;
+}
+.feature:hover{
+	background:#d8d5d5;
+	border:none;
+	transform:scale(1.02);
+}
+.footer{
+	background:#06c4dc;
+	text-align:center;
+	font-size:14px;
+	color:white;
+}
+.footer i{
+	top:3px;
+}
+.footer i:first-of-type{
+	color:red;
+}
+.footer i:last-of-type{
+	color:#0e0e0e;
+	padding:0px;
+	top:-10px;
+	right:-2px;
+}
+.footer>span{
+	margin:20px 0px 20px;
+	display:inline-block;
+	font-size:16px;
+	font-family:verdana;
+}
+@media(max-width:768px){
+	.container{
+		background-size:cover;
+	}
+	.fa{
+		font-size:1em;
+		padding:5px;
+	}
+	.fa-search{
+		left:10px;
+	}
+	.fa-bars{
+		right:10px;
+	}
+	.logo{
+		font-size:16px;
+	}
+	.logo i{
+		font-size:14px;
+	}
+	.logo i{
+		top:-10px;
+		right:-20px;
+	}
+	.aside{
+		float:none;
+		text-align:center;
+	}
+	.aside i{
+		top:380px;
+		display:inline;
+		border:none;
+		border-right:2px solid #06c4dc;
+	}
+	.content{
+		margin-top:3em;
+		padding:0 20px;
+	}
+	.content>h3{
+		font-size:20px;
+	}
+	 .content>p{
+		font-size:13px;
+	}
+	.fa-mobile{
+		font-size:25px;
+	}
+	.features{
+		width:100%;
+		grid-template-columns:1fr;
+	}
+	.feature:nth-child(even){
+		background:#d8d5d5;
+	}
+	.feature:hover{
+		background:white;
+		border:1px solid #06c4dc;
+	}
+	.form{
+		width:100%;
+	}
+	.footer>span{
+		margin-top:10px;
+		font-size:16px;
+	}
+}
+@media(min-width:546px) and (max-width:768px){
+	.aside i{
+		top:340px;
+	}
+}
+@media(max-height:546px){
+	.container{
+		height:100%;
+	}
+}
